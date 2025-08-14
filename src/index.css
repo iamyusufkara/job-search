@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+@theme {
+  --default-font-family: 'Open Sans', var(--font-sans);
+}
