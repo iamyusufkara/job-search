@@ -5,5 +5,8 @@
 
   --color-brand-gray-1: #dadce0;
   --color-brand-blue-1: #1967d2;
+  --color-brand-blue-2: #4285f4;
   --color-brand-green-1: #137333;
+
+  --shadow-blue: 0 4px 6px -1px rgba(25, 103, 210, 0.4), 0 2px 4px -2px rgba(25, 103, 210, 0.4);
 }
