@@ -4,7 +4,7 @@ import { expect, afterEach } from 'vitest'
 
 expect.extend(matchers)
 
-// Bei jedem Test wird einmal zurückgesetzt, damit der nächste Test
+// Nach jedem Test wird einmal zurückgesetzt, damit der nächste Test
 afterEach(() => {
   cleanup()
 })
