@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       menuItems: [
-        { text: 'Unser Team', url: '/' },
+        { text: 'Unser Team', url: '/teams' },
         { text: 'Standorte', url: '/' },
         { text: 'How we hire', url: '/' },
         { text: 'Karriere', url: '/jobs/results' },
