@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import JobFilterSidebar from '@/components/JobResults/JobFilterSidebar/JobFilterSidebar.vue'
+import JobFilterSidebar from '@/components/JobResults/JobFiltersSidebar/JobFiltersSidebar.vue'
 import JobListings from '@/components/JobResults/JobListings.vue'
 
 export default {
