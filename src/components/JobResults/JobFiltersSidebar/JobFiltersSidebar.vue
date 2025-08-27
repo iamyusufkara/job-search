@@ -7,6 +7,11 @@
           <action-button text="Filter zurücksetzen" type="secondary" />
         </div>
       </div>
+
+      <collapsible-accordion header="Abschluss" />
+
+      <job-filters-sidebar-job-types />
+
       <job-filters-sidebar-organizations />
     </section>
   </div>
@@ -14,12 +19,16 @@
 
 <script>
 import ActionButton from '@/components/Shared/ActionButton.vue'
-import JobFiltersSidebarOrganizations from './JobFiltersSidebarOrganizations.vue'
+import CollapsibleAccordion from '@/components/Shared/CollapsibleAccordion.vue'
+import JobFiltersSidebarJobTypes from '@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarJobTypes.vue'
+import JobFiltersSidebarOrganizations from '@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarOrganizations.vue'
 
 export default {
   name: 'JobFiltersSidebar',
   components: {
     ActionButton,
+    CollapsibleAccordion,
+    JobFiltersSidebarJobTypes,
     JobFiltersSidebarOrganizations,
   },
 }
