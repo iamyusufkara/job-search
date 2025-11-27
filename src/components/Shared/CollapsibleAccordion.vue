@@ -1,37 +1,38 @@
 <template>
   <div class="border-brand-gray-2 border-b border-solid py-5">
-    <div class="flex cursor-pointer flex-wrap items-center justify-between" @click="open">
+    <div
+      class="flex cursor-pointer flex-wrap items-center justify-between"
+      role="button"
+      @click="open"
+    >
       <h3 class="text-base font-semibold">{{ header }}</h3>
 
       <font-awesome-icon :icon="caretIcon" />
     </div>
+
+    <div v-if="isOpen" class="mt-5 w-full">
+      <slot>
+        <p>Whoops, somebody forgot to populate me!</p>
+      </slot>
+    </div>
   </div>
-  <div v-if="isOpen"><slot></slot></div>
 </template>
 
-<script>
-export default {
-  name: 'CollapsibleAccordion',
-  props: {
-    header: {
-      type: String,
-      required: true,
-    },
+<script setup>
+import { computed, ref } from 'vue'
+
+defineProps({
+  header: {
+    type: String,
+    required: true,
   },
-  data() {
-    return {
-      isOpen: false,
-    }
-  },
-  computed: {
-    caretIcon() {
-      return this.isOpen ? ['fas', 'angle-up'] : ['fas', 'angle-down']
-    },
-  },
-  methods: {
-    open() {
-      this.isOpen = !this.isOpen
-    },
-  },
+})
+
+const isOpen = ref(false)
+
+const open = () => {
+  isOpen.value = !isOpen.value
 }
+
+const caretIcon = computed(() => (isOpen.value ? ['fas', 'angle-up'] : ['fas', 'angle-down']))
 </script>
